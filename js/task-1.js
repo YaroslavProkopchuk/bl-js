@@ -312,6 +312,7 @@ console.log(
 Задача:
 Напиши функцію reverseWords(sentence), яка приймає рядок sentence, розбиває його на слова, змінює порядок слів на зворотний і повертає перетворений рядок.
 */
+/*
 function reverseWords(sentence) {
   return sentence.split(" ").reverse().join(" ");
 }
@@ -320,3 +321,278 @@ console.log(reverseWords("JavaScript is awesome"));
 
 console.log(reverseWords("Keep pushing forward"));
 // "forward pushing Keep"
+*/
+/*
+Задача: countVowels(text)
+Напиши функцію countVowels(text), яка приймає рядок text і повертає кількість голосних (a, e, i, o, u) у ньому.
+Приклад роботи:*/
+/*
+console.log(countVowels("JavaScript is fun")); // 5
+console.log(countVowels("Hello, world!")); // 3
+console.log(countVowels("Why so serious?"));
+
+function countVowels(text) {
+  let sum = 0;
+  const vowels = "aeiou";
+  for (let i = 0; i < text.length; i++) {
+    if (vowels.includes(text[i].toLowerCase())) {
+      sum += 1;
+    }
+  }
+  return sum;
+}
+*/
+/*
+Задача: findLongestWord(sentence)
+Напиши функцію findLongestWord(sentence), яка приймає рядок sentence, розбиває його на слова і повертає найдовше слово.
+Приклад роботи*/
+/*
+console.log(findLongestWord("JavaScript makes coding enjoyable"));
+// "enjoyable"
+
+console.log(findLongestWord("Keep pushing forward!"));
+// "pushing"
+
+function findLongestWord(sentence) {
+  let arr = sentence.split(" ");
+  let long = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i].length > long.length) {
+      long = arr[i];
+    }
+  }
+  return long;
+}
+  */
+/*
+ Задача: findMaxNumber(arr)
+Напиши функцію findMaxNumber(arr), яка:
+- Приймає масив чисел arr.
+- Знаходить найбільше число у цьому масиві.
+- Повертає найбільше значення.
+Приклад роботи*/
+/*
+console.log(findMaxNumber([3, 7, 2, 10, 5])); // 10
+console.log(findMaxNumber([-1, -5, -3, -10])); // -1
+console.log(findMaxNumber([100, 99, 101, 98])); // 101
+
+function findMaxNumber(arr) {
+  let max = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > max) {
+      max = arr[i];
+    }
+  }
+  return max;
+}
+*/
+/*
+📌 Якщо вік користувача 18 або більше — вивести "Повнолітній", інакше — "Дитина".
+const age = 16;
+if (age >= 18) {
+  console.log("Повнолітній");
+} else {
+ console.log
+  ("Дитина");
+}
+  */
+/*
+Напиши функцію greet, яка приймає ім’я користувача й виводить:
+Привіт, Ім’я!
+function greet(name) {
+  console.log(`Привіт, ${name}!`);
+}
+*/
+/*Створи функцію checkAge, яка:
+
+приймає параметр age,
+
+якщо age >= 18, виводить "Доступ дозволено",
+
+інакше — "Доступ заборонено".*/
+/*
+function checkAge(age) {
+  if (age >= 18) {
+    console.log("Доступ дозволено");
+  } else {
+    console.log("Доступ заборонено");
+  }
+}
+*/
+/*Напиши функцію double(num), яка приймає число num і повертає подвоєне значення.
+ */
+/*
+function double(num) {
+  return num * 2;
+}
+
+console.log(double(5)); // 10
+console.log(double(12)); // 24
+console.log(double(-3)); // -6
+
+//Напиши функцію sumArray(arr), яка приймає масив чисел arr і повертає суму всіх елементів.
+function sumArray(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum;
+}
+
+console.log(sumArray([1, 2, 3, 4])); // 10
+console.log(sumArray([-5, 10, -3])); // 2
+console.log(sumArray([100, 200, 300])); // 600
+*/
+/*Нова задача: reverseString(str)
+Напиши функцію reverseString(str), яка приймає рядок str і повертає його у зворотному порядку.
+*/
+/*
+function reverseString(str) {
+  return str.split("").reverse().join("");
+}
+  */
+/*
+Задача: findUniqueNumbers(arr)
+Напиши функцію findUniqueNumbers(arr), яка:
+- Приймає масив чисел arr.
+- Повертає масив лише унікальних чисел (без повторень).*/
+function findUniqueNumbers(arr) {
+  const newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (!newArr.includes(arr[i])) {
+      newArr.push(arr[i]);
+    }
+  }
+  return newArr;
+} /*
+/*
+console.log(reverseString("JavaScript")); // "tpircSavaJ"
+console.log(reverseString("Hello")); // "olleH"
+console.log(reverseString("racecar")); // "racecar"*/
+/*
+console.log(findUniqueNumbers([1, 2, 2, 3, 4, 4, 5])); // [1, 2, 3, 4, 5]
+console.log(findUniqueNumbers([10, 20, 30, 10, 20])); // [10, 20, 30]
+console.log(findUniqueNumbers([100, 99, 98, 100])); // [100, 99, 98]
+console.log(findUniqueNumbers([7, 7, 7, 7, 7])); // [7]
+*/
+/* Задача: removeNegativeNumbers(arr)
+Напиши функцію removeNegativeNumbers(arr), яка:
+- Приймає масив чисел arr.
+- Повертає масив без від’ємних чисел (залишає тільки 0 і додатні).
+Приклад роботи*/
+/*
+console.log(removeNegativeNumbers([1, -2, 3, -4, 5])); // [1, 3, 5]
+console.log(removeNegativeNumbers([-10, 20, -30, 40])); // [20, 40]
+console.log(removeNegativeNumbers([0, -1, 2, -3, 4])); // [0, 2, 4]
+
+function removeNegativeNumbers(arr) {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] >= 0) {
+      newArr.push(arr[i]);
+    }
+  }
+  return newArr;
+}
+*/
+/*
+const apartment = {
+  descr: "Spacious apartment in the city center",
+  rating: 4,
+  price: 2153,
+};
+
+const keys = [];
+const values = [];
+for (const key in apartment) {
+  keys.push(key);
+  values.push(apartment[key]);
+}
+console.log(keys);
+console.log(values);
+*/
+/*
+const apartment = {
+  descr: "Spacious apartment in the city center",
+  rating: 4,
+  price: 2153,
+};
+const values = [];
+const keys = Object.keys(apartment);
+for (const key of keys) {
+  values.push(apartment[key]);
+}
+console.log(keys);
+console.log(values);
+*/
+/*
+const colors = [
+  { hex: "#f44336", rgb: "244,67,54" },
+  { hex: "#2196f3", rgb: "33,150,243" },
+  { hex: "#4caf50", rgb: "76,175,80" },
+  { hex: "#ffeb3b", rgb: "255,235,59" },
+];
+const hexColors = [];
+const rgbColors = [];
+for (const col of colors) {
+  hexColors.push(col.hex);
+  rgbColors.push(col.rgb);
+}
+
+console.log(hexColors);
+console.log(rgbColors);
+*/
+/*
+Задача: Підрахунок загальної вартості товарів
+У тебе є масив об'єктів products, кожен містить name, price та quantity.
+📌 Напиши функцію calculateTotal(products), яка повертає загальну вартість всіх товарів.
+
+*/
+/*
+
+const products = [
+  { name: "Laptop", price: 1200, quantity: 2 },
+  { name: "Mouse", price: 50, quantity: 3 },
+  { name: "Keyboard", price: 100, quantity: 1 },
+  { name: "Monitor", price: 400, quantity: 2 },
+];
+
+console.log(calculateTotal(products)); // Повинно повернути 3550
+
+function calculateTotal(products) {
+  return products.reduce(
+    (akb, product) => akb + product.price * product.quantity,
+    0
+  );
+}*/
+/*Ось список товарів для твоєї задачі!
+🔹 Масив об'єктів products*/
+/*
+const products = [
+  { name: "Laptop", price: 1200, quantity: 2 },
+  { name: "Mouse", price: 50, quantity: 3 },
+  { name: "Keyboard", price: 100, quantity: 1 },
+  { name: "Monitor", price: 400, quantity: 2 },
+  { name: "Smartphone", price: 900, quantity: 1 },
+];
+/*
+
+📌 Завдання:
+✔ Напиши функцію findMostExpensiveProduct(products), яка знайде товар з найвищою ціною (price).
+✔ Функція має повернути об'єкт товару, а не просто ціну.
+✔ Використай reduce() або sort(), щоб знайти найдорожчий товар.
+*/
+/*
+function findMostExpensiveProduct(products) {
+  let maxPrice = products[0];
+
+  console.log(maxPrice);
+  for (let i = 0; i < products.length; i++) {
+    if (maxPrice.price < products[i].price) {
+      maxPrice = products[i];
+    }
+  }
+  return maxPrice;
+}
+findMostExpensiveProduct(products);
+*/
